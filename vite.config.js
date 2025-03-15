@@ -5,6 +5,22 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    port: 4000,
+    port: 3001,
+  },
+  build: {
+    lib: {
+      entry: 'src/index.js',
+      name: 'Ds-vite',
+      fileName: 'index',
+    },
+    rollupOptions: {
+      external: ['@storybook/*'],
+      output: {
+        dir: 'dist',
+        entryFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
+      },
+    },
+    assetsDir: '',
   },
 })
