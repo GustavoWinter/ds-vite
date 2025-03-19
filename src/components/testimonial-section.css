@@ -1,0 +1,11 @@
+@import '../index.css';
+
+.testimonial-section {
+  @apply p-4 bg-gray-100 rounded-lg shadow-md;
+}
+.testimonial {
+  @apply italic mb-4;
+}
+.author {
+  @apply font-bold text-right;
+}
